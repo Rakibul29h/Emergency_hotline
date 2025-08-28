@@ -13,6 +13,7 @@ for (let h of heartSelector) {
 }
 
 // for call btn functionality
+
 let callBtn = document.querySelectorAll(".call-btn");
 for (let h of callBtn) {
   h.addEventListener("click", function (e) {
@@ -29,5 +30,21 @@ for (let h of callBtn) {
     }else{
         window.alert("❌ You don’t have enough coins. A minimum of 20 coins is required to make a call.");
     }
+  });
+}
+
+
+
+// copy text section
+
+let copyBtn=document.querySelectorAll(".copy-btn")
+for (let copy of copyBtn) {
+  copy.addEventListener("click", function (e) {
+    let copyNumberSelector=document.getElementById("copy");
+    let currentCopyNumber=textToNumber(copyNumberSelector);
+    let serviceNumber=e.target.parentNode.parentNode.querySelector(".service-number").innerText;
+    window.navigator.clipboard.writeText(serviceNumber);
+    window.alert(`The number has been copied. ${serviceNumber}`);
+    copyNumberSelector.innerText=currentCopyNumber+1;
   });
 }
