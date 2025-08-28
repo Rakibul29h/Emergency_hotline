@@ -50,7 +50,7 @@ for (let h of callBtn) {
         data.push(objectMaker(serviceName,serviceNumber,time));
     
         let dataContainer=document.getElementById("history-container");
-        dataContainer.innerHTML=" ";
+        dataContainer.innerHTML="";
         for(let ele of data){
             let createDiv=document.createElement("div");
             createDiv.innerHTML=`
@@ -89,3 +89,9 @@ for (let copy of copyBtn) {
     copyNumberSelector.innerText=currentCopyNumber+1;
   });
 }
+
+document.getElementById("clear-btn").addEventListener("click",function(){
+    data=[];
+    document.getElementById("history-container").innerHTML="";
+})
+
