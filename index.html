@@ -297,12 +297,25 @@
             </div>
           </div>
         </div>
-        <div class="w-1/4 history  bg-white rounded-2xl"></div>
+        <div class="w-1/4 history  bg-white rounded-2xl p-6">
+
+          <div class="flex justify-between items-center my-4">
+            <div class="flex gap-2">
+              <i class="fa-regular fa-clock text-2xl opacity-70"></i>
+              <h1 class="roboto text-xl font-[500]">Call History</h1>
+            </div>
+            <div>
+               <button id="clear-btn" class="call-btn text-[1rem] font-semibold rounded-full py-[14px] px-9 text-white bg-[#00a63e] inter">Clear</button>
+            </div>
+          </div>
+          <div id="history-container">
+          </div>
+        </div>
       </section>
       
     </main>
 
-
+    <script src="./fau.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
