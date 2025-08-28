@@ -95,3 +95,18 @@ document.getElementById("clear-btn").addEventListener("click",function(){
     document.getElementById("history-container").innerHTML="";
 })
 
+
+document.getElementById("showHistory").addEventListener("click",function(e){
+
+  if(e.target.innerText.toString()==="Show History"){
+    historySection.classList.remove("hidden")
+    historySection.classList.add("block")
+    e.target.innerText="Hide History"
+  }
+  else if(e.target.innerText.toString()==="Hide History"){
+    historySection.classList.remove("block")
+    historySection.classList.add("hidden")
+    e.target.innerText="Show History"
+  }
+  
+})
